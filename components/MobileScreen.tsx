@@ -1,40 +1,38 @@
 "use client"
 
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 
 const MobileScreen = () => {
     const pathname = usePathname();
-    const [showMenu, setShowMenu] = useState<boolean>();
-    const toggleMenu = ()=> setShowMenu(prev => !prev);
 
     return (
         <div
             className="grid grid-cols-2 text-sm"
         >
-            <div className="flex items-center">
-                <Link href="/">
-                    <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        width={35}
-                        height={35}
-                    />
-                </Link>
-            </div>
-            <div className="relative text-end">
-                <button onClick={toggleMenu}>
-                    <Menu size={30} className="cursor-pointer text-maroon-light" />
-                </button>
-                {
-                    showMenu &&
-                    <div className="bg-white p-2 absolute top-0 right-0">
-                        <button onClick={toggleMenu} className="cursor-pointer">
-                            <X size={20} className="text-maroon" />
-                        </button>
+            <Link href="/">
+                <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    width={35}
+                    height={35}
+                />
+            </Link>
+            <div className="flex items-center justify-end">
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <Menu size={30} className="cursor-pointer text-maroon-light" />
+                    </SheetTrigger>
+                    <SheetHeader className="sr-only">
+                        <SheetTitle>Navigation menu</SheetTitle>
+                        <SheetDescription>
+                            Click to change the page
+                        </SheetDescription>
+                    </SheetHeader>
+                    <SheetContent className="p-5 bg-blue-sky border-none w-64">
                         <nav className="text-start flex flex-col space-y-2">
                             <Link href="/" className={`hover:text-maroon-light ${pathname === "/" && 'text-maroon-light'}`}>Home</Link>
                             <Link href="/explore" className={`hover:text-maroon-light ${pathname === "/explore" && 'text-maroon-light'}`}>Explore</Link>
@@ -43,8 +41,8 @@ const MobileScreen = () => {
                             <Link href="/contact" className={`hover:text-maroon-light ${pathname === "/contact" && 'text-maroon-light'}`}>Contact</Link>
                             <Link href="/book-now" className={`hover:text-maroon-light ${pathname === "/book-now" && 'text-maroon-light'}`}>Book now</Link>
                         </nav>
-                    </div>
-                }
+                    </SheetContent>
+                </Sheet>
             </div>
         </div>
     );

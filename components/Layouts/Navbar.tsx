@@ -3,7 +3,7 @@ import MobileScreen from "../MobileScreen";
 
 const Navbar = () => {
     return ( 
-        <div className="sticky top-0 bg-white text-dark p-3 ">
+        <div className="bg-white text-dark p-3 ">
             <nav className="hidden lg:block">
                 <DesktopScreen />
             </nav>

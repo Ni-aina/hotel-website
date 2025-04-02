@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Dancing_Script, Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layouts/Navbar";
 import Footer from "@/components/Layouts/Footer";
@@ -14,6 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const dancingScript = Dancing_Script({
+  variable: "--font-danc",
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+});
+const fontSans = `${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${raleway.variable}`;
+
 export const metadata: Metadata = {
   title: "Hotel website",
   description: "Website hotel blog",
@@ -27,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontSans} antialiased`}
       >
-        <header>
+        <header className="sticky top-0 z-50 bg-white px-4 lg:px-8">
           <Navbar />
         </header>
         <main>
