@@ -32,7 +32,7 @@ const MobileScreen = () => {
                             Click to change the page
                         </SheetDescription>
                     </SheetHeader>
-                    <SheetContent className="p-5 bg-blue-sky border-none w-64">
+                    <SheetContent className="p-5 bg-blue-sky border-none w-52 text-white">
                         <nav className="text-start flex flex-col space-y-2">
                             <Link href="/" className={`hover:text-maroon-light ${pathname === "/" && 'text-maroon-light'}`}>Home</Link>
                             <Link href="/explore" className={`hover:text-maroon-light ${pathname === "/explore" && 'text-maroon-light'}`}>Explore</Link>

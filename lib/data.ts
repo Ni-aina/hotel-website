@@ -64,6 +64,18 @@ export const facilities = [
 
 export const rooms = [
     {
-        
+        title: "2 rooms available",
+        background: "/images/home/2-rooms.png",
+        text: "Television set, Extra sheets and Breakfast"
+    },
+    {
+        title: "4 rooms available",
+        background: "/images/home/4-rooms.png",
+        text: "Television set, Extra sheets, Breakfast, and fireplace"
+    },
+    {
+        title: "8 rooms available",
+        background: "/images/home/2-rooms.png",
+        text: "Television set, Extra sheets, Breakfast, and fireplace, Console and bed rest"
     }
 ]

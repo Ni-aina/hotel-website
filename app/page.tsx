@@ -1,14 +1,8 @@
+import RoomCard from "@/components/Cards/RoomCard";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { bookItems, facilities } from "@/lib/data";
+import { bookItems, facilities, rooms } from "@/lib/data";
 import { Play } from "lucide-react";
 import Image from "next/image";
-
-const selectStyle = `@layer utilities {
-  .focus-visible\:ring-\[3px\]:focus-visible {
-    --tw-ring-shadow: none !important;
-    box-shadow: none !important;
-  }
-}`
 
 const HomePage = () => {
   return (
@@ -102,7 +96,7 @@ const HomePage = () => {
           ))
         }
       </div>
-      <div className="w-full h-[600px] relative">
+      <div className="w-full min-h-[1100px] sm:min-h-[750px] md:min-h-[500px] lg:min-h-[600px] relative">
         <Image
           src={"/images/home/hotel-rooms.png"}
           alt="hotel rooms"
@@ -115,15 +109,27 @@ const HomePage = () => {
           fill
           className="object-cover"
         />
-        <div className="absolute left-0 right-0 top-5 bottom-5 mx-auto p-3">
+        <div className="absolute left-0 right-0 top-5 bottom-5 mx-auto p-3 flex flex-col items-center">
           <div className="flex flex-col items-center gap-3 text-white">
             <h1 className="text-3xl font-[600px]" style={{ fontFamily: "Raleway" }}>Luxurious Rooms</h1>
             <hr className="w-24 border-2"/>
             <p>All room are design for your comfort</p>
           </div>
-          <div className="flex flex-wrap gap-4 justify-center mt-5">
-            
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 mt-12">
+            {
+              rooms.map((room, index) => 
+                <RoomCard room={room} key={index} />
+              )
+            }
           </div>
+        </div>
+      </div>
+      <div>
+        <div className="flex flex-col items-center px-4 py-8 lg:py-16 gap-y-2 lg:gap-y-4">
+          <h1 className="text-xl font-bold">Testimonies</h1>
+          <p className="text-dark-night text-md">
+            Grid Cards which are not finished yet
+          </p>
         </div>
       </div>
     </>
