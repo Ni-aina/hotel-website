@@ -79,3 +79,27 @@ export const rooms = [
         text: "Television set, Extra sheets, Breakfast, and fireplace, Console and bed rest"
     }
 ]
+
+export const Testimonies = [
+    {
+        author: "Anthony Bruff",
+        profil: "/images/home/Ellipse-1.png",
+        date: "2 Mar. 2023",
+        text: "    The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.",
+        star: 4
+    },
+    {
+        author: "Jamiyu Aliyu",
+        profil:"/images/home/Ellipse-3.png",
+        date: "5 Apr. 2023",
+        text: "    The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.",
+        star: 5
+    },
+    {
+        author: "Regina Gella",
+        profil: "/images/home/Ellipse-2.png",
+        date: "25 Mar. 2023",
+        text: "    The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.",
+        star: 4
+    }
+]

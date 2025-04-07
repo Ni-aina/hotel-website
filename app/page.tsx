@@ -1,4 +1,5 @@
 import RoomCard from "@/components/Cards/RoomCard";
+import TestimonyCard from "@/components/Cards/TestimonyCard";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { bookItems, facilities, rooms } from "@/lib/data";
 import { Play } from "lucide-react";
@@ -126,10 +127,8 @@ const HomePage = () => {
       </div>
       <div>
         <div className="flex flex-col items-center px-4 py-8 lg:py-16 gap-y-2 lg:gap-y-4">
-          <h1 className="text-xl font-bold">Testimonies</h1>
-          <p className="text-dark-night text-md">
-            Grid Cards which are not finished yet
-          </p>
+          <h1 className="text-3xl font-semibold text-dark my-5" style={{ fontFamily: "Raleway" }}>Testimonies</h1>
+          <TestimonyCard />
         </div>
       </div>
     </>
