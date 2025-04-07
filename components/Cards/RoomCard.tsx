@@ -7,9 +7,9 @@ interface RoomCardProps {
     text: string;
 }
 
-const RoomCard = ({ room, key }: {  key: number, room: RoomCardProps}) => {
+const RoomCard = ({ room }: {  room: RoomCardProps}) => {
     return ( 
-        <div key={key} className="rounded-lg p-4 lg:p-5 bg-white max-w-[330px]">
+        <div className="rounded-lg p-4 lg:p-5 bg-white max-w-[330px]">
             <div className="relative h-[185px] lg:h-[275px] rounded-md overflow-hidden">
                 <Image
                     src={room.background}
