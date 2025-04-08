@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Geist, Geist_Mono, Raleway } from "next/font/google";
+import { Dancing_Script, Geist, Geist_Mono, Mulish, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layouts/Navbar";
 import Footer from "@/components/Layouts/Footer";
@@ -23,7 +23,13 @@ const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
 });
-const fontSans = `${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${raleway.variable}`;
+
+const mulish = Mulish({
+  variable: "--font-mulish",
+  subsets: ["latin"],
+});
+
+const fontSans = `${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${raleway.variable} ${mulish.variable}`;
 
 export const metadata: Metadata = {
   title: "Hotel website",
