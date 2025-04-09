@@ -28,7 +28,7 @@ const DesktopScreen = () => {
                 <Link href="/about" className={`hover:text-maroon-light ${pathname === "/about" && 'text-maroon-light'}`}>About</Link>
                 <Link href="/contact" className={`hover:text-maroon-light ${pathname === "/contact" && 'text-maroon-light'}`}>Contact</Link>
             </nav>
-            <Link href="/book-now">
+            <Link href="#">
                 <button className="border cursor-pointer py-2 px-3  text-white rounded-md bg-maroon-light hover:text-maroon-light hover:bg-white hover:border-maroon-light">
                     Book now
                 </button>

@@ -45,7 +45,7 @@ const MobileScreen = () => {
                             <Link onClick={handleSheetClose} href="/rooms" className={`hover:text-maroon-light ${pathname === "/rooms" && 'text-maroon-light'}`}>Rooms</Link>
                             <Link onClick={handleSheetClose} href="/about" className={`hover:text-maroon-light ${pathname === "/about" && 'text-maroon-light'}`}>About</Link>
                             <Link onClick={handleSheetClose} href="/contact" className={`hover:text-maroon-light ${pathname === "/contact" && 'text-maroon-light'}`}>Contact</Link>
-                            <Link onClick={handleSheetClose} href="/book-now" className={`hover:text-maroon-light ${pathname === "/book-now" && 'text-maroon-light'}`}>Book now</Link>
+                            <Link onClick={handleSheetClose} href="#" className={`hover:text-maroon-light ${pathname === "/book-now" && 'text-maroon-light'}`}>Book now</Link>
                         </nav>
                     </SheetContent>
                 </Sheet>

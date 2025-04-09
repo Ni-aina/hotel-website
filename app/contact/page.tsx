@@ -1,4 +1,6 @@
 import BackgroundUI from "@/components/BackgroundUI";
+import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 
 const ContactPage = () => {
 
@@ -12,7 +14,16 @@ const ContactPage = () => {
                     perfect luxury bedroom design.
                 </p>
             </BackgroundUI>
-
+            <ContactForm />
+            <div className="relative w-full h-[200px] lg:h-[459px]">
+                <Image
+                    src="/images/contact/cart.png"
+                    alt="Map"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </div>
         </>
     );
 }

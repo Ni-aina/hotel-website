@@ -74,7 +74,7 @@ const Footer = () => {
                     </p>
                     <div className="grid grid-cols-2 bg-white p-1 rounded-sm">
                         <input type="email" className="text-maroon focus-visible:outline-none px-2" placeholder="Enter your email" />
-                        <button className="text-sm lg:text-md p-2 bg-maroon-light text-white rounded-sm">
+                        <button className="text-sm lg:text-md p-2 bg-maroon-light text-white rounded-sm cursor-pointer hover:bg-maroon">
                             Subscribe
                         </button>
                     </div>
